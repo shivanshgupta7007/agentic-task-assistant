@@ -1,5 +1,7 @@
 # Agentic Task Assistant + Evaluation Harness
 
+**Live API:** https://agentic-task-assistant.onrender.com - `GET /health`, `POST /run` with `{"task": "..."}` returns the answer plus the full tool-call trace.
+
 A small but honest AI agent: it takes a task in plain English, decides which **tools** to call (calculator, clock, word counter, notes), executes them step by step, and composes the final answer. Paired with an **evaluation harness** that scores the agent's tool selection and answer quality across a suite of task cases - because an agent you can't measure is a demo, not a system.
 
 ## What it demonstrates
