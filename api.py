@@ -26,7 +26,7 @@ class RunRequest(BaseModel):
 
 @app.get("/health")
 def health() -> dict:
-    return {"status": "ok", "model": "gemini-2.0-flash"}
+    return {"status": "ok", "model": "gemini-3.6-flash"}
 
 
 @app.post("/run")

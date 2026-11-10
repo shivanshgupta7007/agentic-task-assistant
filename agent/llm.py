@@ -13,7 +13,7 @@ from .tools import ToolRegistry
 
 
 class GeminiAgentModel:
-    def __init__(self, tools: ToolRegistry, api_key: str | None = None, model: str = "gemini-2.0-flash"):
+    def __init__(self, tools: ToolRegistry, api_key: str | None = None, model: str = "gemini-3.6-flash"):
         import google.generativeai as genai  # lazy import
 
         key = api_key or os.environ.get("GEMINI_API_KEY")
