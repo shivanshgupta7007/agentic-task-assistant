@@ -1,0 +1,32 @@
+[
+  {
+    "id": "calc-tip",
+    "task": "A bill is 860 rupees and I want to leave a 15% tip. What is the total?",
+    "expected_tools": ["calculator"],
+    "must_include": ["989"]
+  },
+  {
+    "id": "wordcount",
+    "task": "How many words are in this sentence: 'The quick brown fox jumps over the lazy dog today'?",
+    "expected_tools": ["word_counter"],
+    "must_include": ["10"]
+  },
+  {
+    "id": "note-roundtrip",
+    "task": "Remember that my favourite editor is VS Code, then tell me what my favourite editor is.",
+    "expected_tools": ["save_note", "read_note"],
+    "must_include": ["VS Code"]
+  },
+  {
+    "id": "time-aware",
+    "task": "What time is it right now in UTC?",
+    "expected_tools": ["get_current_time"],
+    "must_include": []
+  },
+  {
+    "id": "multi-step",
+    "task": "Count the words in 'hello wide world of agents' and then multiply that count by 12.",
+    "expected_tools": ["word_counter", "calculator"],
+    "must_include": ["60"]
+  }
+]
