@@ -11,6 +11,7 @@ from __future__ import annotations
 import os
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from agent.core import Agent
@@ -18,6 +19,11 @@ from agent.llm import GeminiAgentModel
 from agent.tools import ToolRegistry
 
 app = FastAPI(title="Agentic Task Assistant", version="1.0.0")
+
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
 
 
 class RunRequest(BaseModel):
